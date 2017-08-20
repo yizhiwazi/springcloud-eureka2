@@ -1,0 +1,12 @@
+
+server:
+  port: 9001  #消费者端口
+
+spring:
+  application:
+    name: hehe-web #应用名 作用:默认会被远程配置中心(Cloud Config)/注册中心（Eureka）作为注册名来调用。
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/  # 指定注册中心
